@@ -33,7 +33,7 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
 .tabs a.arr { margin-left: auto; font-size: 22px; }
 
 /* ---------- SIDEBAR (fixed, scroll sendiri) ---------- */
-.side { position: fixed; top: 110px; bottom: 0; left: 0; width: 287px; background: #fff; overflow-y: auto; border-right: 1px solid #e2e2e2; padding-bottom: 30px; }
+.side { position: sticky; top: 110px; flex: 0 0 287px; height: calc(100vh - 110px); align-self: flex-start; background: #fff; overflow-y: auto; border-right: 1px solid #e2e2e2; padding-bottom: 30px; }
 .sin { display: block; width: 235px; height: 42px; margin: 20px 0 4px 22px; padding: 0 12px; border: 1px solid #ccc; border-radius: 3px; font: inherit; font-size: 18px; }
 .side h4 { font-size: 17px; font-weight: 600; color: #666; text-transform: uppercase; padding: 16px 10px 4px; }
 .side a { display: block; margin: 0 10px; padding: 5px 12px 5px 23px; font-size: 18px; color: #222; }
@@ -41,18 +41,19 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
 .side a.on { background: #ddd; border-left: 4px solid #04aa6d; font-weight: 600; }
 
 /* ---------- MAIN (urutan: kartu, pagination, banner, footer) ---------- */
-.main { margin: 0 270px 0 287px; padding: 24px 56px 0; min-height: 100vh; display: flex; flex-direction: column; }
+.wrap { display: flex; align-items: flex-start; }
+.main { flex: 1; min-width: 0; padding: 24px 56px 0; display: flex; flex-direction: column; }
 .pag { order: 98; background: #fff; margin: 0 -56px; padding: 30px 0 120px; display: flex; justify-content: center; }
 .pag a { width: 50px; line-height: 48px; text-align: center; font-size: 18px; color: #000; }
 .pag a.on { background: #04aa6d; color: #fff; }
 .pag a.dis { color: #ccc; }
 
 /* ---------- KOLOM IKLAN ---------- */
-.ads { position: fixed; top: 110px; right: 0; bottom: 0; width: 270px; padding: 36px 0 0 70px; background: #f1f1f1; }
+.ads { position: sticky; top: 110px; flex: 0 0 270px; height: calc(100vh - 110px); align-self: flex-start; padding: 36px 0 0 70px; background: #f1f1f1; }
 .ads a { color: #2268d6; font-weight: 700; font-size: 19px; }
 
 /* ---------- FOOTER ---------- */
-.foot { order: 100; margin: 0 -56px; background: #282a35; color: #ddd; text-align: center; padding: 36px 40px 28px; font-size: 15px; }
+.foot { order: 100; margin: 0; background: #282a35; color: #ddd; text-align: center; padding: 36px 40px 28px; font-size: 15px; }
 .fhead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; font-size: 18px; font-weight: 600; }
 .fhead img { height: 50px; filter: brightness(0) invert(1); }
 .fhead a { color: #ffd93b; }
@@ -65,7 +66,7 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
 .foot p { color: #ccc; margin: 6px 0; }
 
 /* ---------- ADVENTURE BANNER (tampil sebelum footer) ---------- */
-.adventure { order: 99; position: relative; height: 425px; overflow: hidden; margin: 0 -56px 36px; background: linear-gradient(#d4e8f2 0%, #e7f3f9 37%, #94be77 37%, #6fa04f 100%); }
+.adventure { order: 99; position: relative; height: 425px; overflow: hidden; margin: 0 0 36px; background: linear-gradient(#d4e8f2 0%, #e7f3f9 37%, #94be77 37%, #6fa04f 100%); }
 .scene { position: absolute; left: 0; bottom: 0; width: 100%; height: 170px; object-fit: fill; }
 .progress-card { position: absolute; left: 10px; top: 27px; z-index: 3; width: 258px; padding: 16px; background: #fff; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, .15); }
 .progress-card small { font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #0b6e4f; text-transform: uppercase; }
@@ -74,7 +75,7 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
 .stats div { display: flex; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #eee; font-size: 15px; }
 .stats div:last-child { border-bottom: 0; }
 .signin-b { display: block; margin-top: 16px; padding: 12px; background: #04aa6d; color: #fff; text-align: center; border-radius: 6px; font-size: 16px; font-weight: 600; }
-.adv-text { position: absolute; left: 21.3%; top: 42px; z-index: 2; }
+.adv-text { position: absolute; left: 337px; top: 42px; z-index: 2; }
 .adv-new { font-size: 13px; font-weight: 700; letter-spacing: 3px; color: #8a5a2b; }
 .adv-text h2 { font-size: 34px; font-weight: 600; margin: 6px 0 4px; color: #111; }
 .adv-text p { font-size: 17px; color: #333; margin-bottom: 18px; }
@@ -97,7 +98,7 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
 .stone-2  { left: 91.7%; top: 380px; width: 40px; }
 .mushroom { left: 69.3%; top: 380px; width: 24px; }
 .chest    { left: 94.0%; top: 327px; width: 76px; }
-.bubble { position: absolute; left: 65.3%; top: 260px; z-index: 2; width: 250px; padding: 16px 20px; background: #fff; border: 3px solid #000; font-family: "Courier New", monospace; font-size: 16px; font-weight: 700; color: #000; }
+.bubble { position: absolute; left: 62.5%; top: 260px; z-index: 2; width: 250px; padding: 16px 20px; background: #fff; border: 3px solid #000; font-family: "Courier New", monospace; font-size: 16px; font-weight: 700; color: #000; }
 .bubble::before { content: ""; position: absolute; left: -17px; top: 24px; border-style: solid; border-width: 8px 14px 8px 0; border-color: transparent #000 transparent transparent; }
 
 /* ---------- CARD ---------- */
