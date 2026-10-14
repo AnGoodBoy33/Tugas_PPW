@@ -49,8 +49,10 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
 .pag a.dis { color: #ccc; }
 
 /* ---------- KOLOM IKLAN ---------- */
-.ads { position: sticky; top: 110px; flex: 0 0 172px; height: calc(100vh - 110px); align-self: flex-start; padding: 36px 0 0 20px; background: #f1f1f1; }
-.ads a { color: #2268d6; font-weight: 700; font-size: 19px; white-space: nowrap; }
+.gambar-container { width: 100%; display: flex; justify-content: center; box-sizing: border-box; }
+.gambar { display: block; width: 150px; max-width: 100%; height: auto; margin: 0; border-radius: 15px; }
+.ads { position: sticky; top: 110px; flex: 0 0 172px; height: calc(100vh - 110px); align-self: flex-start; padding: 36px 0 0; box-sizing: border-box; background: #f1f1f1; }
+.ads a { display: block; text-align: center; color: #2268d6; font-weight: 700; font-size: 19px; white-space: nowrap; }
 
 /* ---------- FOOTER ---------- */
 .foot { order: 100; margin: 0; background: #282a35; color: #ddd; text-align: center; padding: 36px 40px 28px; font-size: 15px; }
