@@ -44,9 +44,19 @@
     <a class="on" href="#">HowTo Home</a>
     <h4>Menus</h4>
     <a href="#">Icon Bar</a><a href="#">Menu Icon</a><a href="#">Accordion</a><a href="#">Tabs</a>
-    <a href="#">Vertical Tabs</a><a href="#">Top Navigation</a><a href="#">Responsive Topnav</a>
-    <a href="#">Side Navigation</a><a href="#">Fixed Sidebar</a><a href="#">Fullscreen Navigation</a>
-    <a href="#">Hover Dropdowns</a><a href="#">Click Dropdowns</a><a href="#">Login Form in Navbar</a>
+    <a href="#">Vertical Tabs</a><a href="#">Tab Headers</a><a href="#">Full Page Tabs</a><a href="#">Hover Tabs</a>
+    <a href="#">Top Navigation</a><a href="#">Responsive Topnav</a><a href="#">Split Navigation</a><a href="#">Navbar with Icons</a>
+    <a href="#">Search Menu</a><a href="#">Search Bar</a><a href="#">Fixed Sidebar</a><a href="#">Side Navigation</a>
+    <a href="#">Responsive Sidebar</a><a href="#">Fullscreen Navigation</a><a href="#">Off-Canvas Menu</a><a href="#">Hover Sidenav Buttons</a>
+    <a href="#">Sidebar with Icons</a><a href="#">Horizontal Scroll Menu</a><a href="#">Vertical Menu</a><a href="#">Bottom Navigation</a>
+    <a href="#">Responsive Bottom Nav</a><a href="#">Bottom Border Nav Links</a><a href="#">Right Aligned Menu Links</a><a href="#">Centered Menu Link</a>
+    <a href="#">Equal Width Menu Links</a><a href="#">Fixed Menu</a><a href="#">Slide Down Bar on Scroll</a><a href="#">Hide Navbar on Scroll</a>
+    <a href="#">Shrink Navbar on Scroll</a><a href="#">Sticky Navbar</a><a href="#">Navbar on Image</a><a href="#">Hover Dropdowns</a>
+    <a href="#">Click Dropdowns</a><a href="#">Cascading Dropdown</a><a href="#">Dropdown in Topnav</a><a href="#">Dropdown in Sidenav</a>
+    <a href="#">Resp Navbar Dropdown</a><a href="#">Subnavigation Menu</a><a href="#">Dropup</a><a href="#">Mega Menu</a>
+    <a href="#">Mobile Menu</a><a href="#">Curtain Menu</a><a href="#">Collapsed Sidebar</a><a href="#">Collapsed Sidepanel</a>
+    <a href="#">Pagination</a><a href="#">Breadcrumbs</a><a href="#">Button Group</a><a href="#">Vertical Button Group</a>
+    <a href="#">Sticky Social Bar</a><a href="#">Pill Navigation</a><a href="#">Responsive Header</a><a href="#">Login Form in Navbar</a>
     <h4>Images</h4>
     <a href="#">Slideshow</a><a href="#">Slideshow Gallery</a><a href="#">Modal Image</a>
     <a href="#">Lightbox</a><a href="#">Image Hover Overlay</a><a href="#">Tab Image Gallery</a>
@@ -290,18 +300,24 @@
     <section class="card">
       <h2>Slideshow Gallery</h2>
       <div class="demo rs">
-        <input type="radio" name="g2" id="b1" checked><input type="radio" name="g2" id="b2"><input type="radio" name="g2" id="b3"><input type="radio" name="g2" id="b4">
+        <input type="radio" name="g2" id="b1" checked><input type="radio" name="g2" id="b2"><input type="radio" name="g2" id="b3"><input type="radio" name="g2" id="b4"><input type="radio" name="g2" id="b5"><input type="radio" name="g2" id="b6">
         <div class="slides">
-          <div><img src="images/nature-wide.jpg" alt=""><label class="prev" for="b4">❮</label><label class="next" for="b2">❯</label></div>
+          <div><img src="images/nature-wide.jpg" alt=""><label class="prev" for="b6">❮</label><label class="next" for="b2">❯</label></div>
           <div><img src="images/snow-wide.jpg" alt=""><label class="prev" for="b1">❮</label><label class="next" for="b3">❯</label></div>
           <div><img src="images/mountains-wide.jpg" alt=""><label class="prev" for="b2">❮</label><label class="next" for="b4">❯</label></div>
-          <div><img src="images/lights-wide.jpg" alt=""><label class="prev" for="b3">❮</label><label class="next" for="b1">❯</label></div>
+          <div><img src="images/lights-wide.jpg" alt=""><label class="prev" for="b3">❮</label><label class="next" for="b5">❯</label></div>
+          <!-- GAMBAR: images/woods-wide.jpg -->
+          <div><img src="images/woods-wide.jpg" alt=""><label class="prev" for="b4">❮</label><label class="next" for="b6">❯</label></div>
+          <!-- GAMBAR: images/5terre-wide.jpg -->
+          <div><img src="images/5terre-wide.jpg" alt=""><label class="prev" for="b5">❮</label><label class="next" for="b1">❯</label></div>
         </div>
         <div class="thumbs">
           <label for="b1"><img src="images/nature-wide.jpg" alt=""></label>
           <label for="b2"><img src="images/snow-wide.jpg" alt=""></label>
           <label for="b3"><img src="images/mountains-wide.jpg" alt=""></label>
           <label for="b4"><img src="images/lights-wide.jpg" alt=""></label>
+          <label for="b5"><img src="images/woods-wide.jpg" alt=""></label>
+          <label for="b6"><img src="images/5terre-wide.jpg" alt=""></label>
         </div>
       </div>
       <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
@@ -327,9 +343,9 @@
         <input type="radio" name="t1" id="t1a" checked><input type="radio" name="t1" id="t1b"><input type="radio" name="t1" id="t1c">
         <div class="nav"><label for="t1a">London</label><label for="t1b">Paris</label><label for="t1c">Tokyo</label></div>
         <div class="panes">
-          <div>London is the capital city of England.</div>
-          <div>Paris is the capital of France.</div>
-          <div>Tokyo is the capital of Japan.</div>
+          <div><h3>London</h3><p>London is the capital city of England.</p></div>
+          <div><h3>Paris</h3><p>Paris is the capital of France.</p></div>
+          <div><h3>Tokyo</h3><p>Tokyo is the capital of Japan.</p></div>
         </div>
       </div>
       <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
@@ -441,7 +457,7 @@
           <a class="on" href="#">Home</a><a href="#">About</a><a href="#">Contact</a>
           <form action="#">
             <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
+            <input type="text" placeholder="Password">
             <button type="button">Login</button>
           </form>
         </div>
@@ -464,9 +480,40 @@
       <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
     </section>
 
+    <!-- PAGINATION -->
+    <nav class="pag">
+      <a class="dis" href="#">‹</a><a class="on" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a>
+      <a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">›</a>
+    </nav>
+
+    <!-- FOOTER -->
     <footer class="foot">
-      <a href="#">Tutorials</a><a href="#">References</a><a href="#">Exercises</a><a href="#">Certificates</a>
-      <p style="margin-top: 10px;">Copyright 2026. Replika untuk latihan.</p>
+      <div class="fhead">
+        <!-- GAMBAR: images/logo.png (dipakai juga di footer, dibuat putih lewat CSS) -->
+        <img src="images/logo.png" alt="W3Schools">
+        <a href="#">PLUS</a><a href="#">SPACES</a><a href="#">GET CERTIFIED</a><a href="#">FOR TEACHERS</a><a href="#">PRACTICE</a><a href="#">CONTACT US</a>
+      </div>
+      <div class="fcols">
+        <div><h5>Top Tutorials</h5>
+          <a href="#">HTML Tutorial</a><a href="#">CSS Tutorial</a><a href="#">JavaScript Tutorial</a><a href="#">How To Tutorial</a><a href="#">SQL Tutorial</a><a href="#">Python Tutorial</a><a href="#">W3.CSS Tutorial</a><a href="#">Bootstrap Tutorial</a><a href="#">PHP Tutorial</a><a href="#">Java Tutorial</a><a href="#">C++ Tutorial</a><a href="#">jQuery Tutorial</a></div>
+        <div><h5>Top References</h5>
+          <a href="#">HTML Reference</a><a href="#">CSS Reference</a><a href="#">JavaScript Reference</a><a href="#">SQL Reference</a><a href="#">Python Reference</a><a href="#">W3.CSS Reference</a><a href="#">Bootstrap Reference</a><a href="#">PHP Reference</a><a href="#">HTML Colors</a><a href="#">Java Reference</a><a href="#">AngularJS Reference</a><a href="#">jQuery Reference</a></div>
+        <div><h5>Top Examples</h5>
+          <a href="#">HTML Examples</a><a href="#">CSS Examples</a><a href="#">JavaScript Examples</a><a href="#">How To Examples</a><a href="#">SQL Examples</a><a href="#">Python Examples</a><a href="#">W3.CSS Examples</a><a href="#">Bootstrap Examples</a><a href="#">PHP Examples</a><a href="#">Java Examples</a><a href="#">XML Examples</a><a href="#">jQuery Examples</a></div>
+        <div><h5>Get Certified</h5>
+          <a href="#">HTML Certificate</a><a href="#">CSS Certificate</a><a href="#">JavaScript Certificate</a><a href="#">Front End Certificate</a><a href="#">SQL Certificate</a><a href="#">Python Certificate</a><a href="#">PHP Certificate</a><a href="#">jQuery Certificate</a><a href="#">Java Certificate</a><a href="#">C++ Certificate</a><a href="#">C# Certificate</a><a href="#">XML Certificate</a></div>
+      </div>
+      <div class="fsocial">
+        <!-- GAMBAR: images/social-youtube.png, social-linkedin.png, social-discord.png, social-facebook.png, social-instagram.png -->
+        <img src="images/social-youtube.png" alt="">
+        <img src="images/social-linkedin.png" alt="">
+        <img src="images/social-discord.png" alt="">
+        <img src="images/social-facebook.png" alt="">
+        <img src="images/social-instagram.png" alt="">
+        <a href="#">FORUM</a><a href="#">ABOUT</a><a href="#">ACADEMY</a>
+      </div>
+      <p>Konten ini dibuat untuk belajar dan latihan. Kami berusaha menjaga keakuratannya, namun kebenarannya tidak dijamin sepenuhnya.</p>
+      <p>Hak cipta 1999-2026. Replika untuk latihan pribadi.</p>
     </footer>
 
   </main>
