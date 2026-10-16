@@ -140,9 +140,10 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
 /* ---------- DROPDOWNS ---------- */
 .dd { position: relative; display: inline-block; }
 .dd-menu { display: none; position: absolute; top: 100%; left: 0; z-index: 5; min-width: 170px; background: #fff; box-shadow: 0 8px 16px rgba(0, 0, 0, .2); }
-.dd-menu a { display: block; padding: 12px 16px; color: #000; }
+.dd-menu a { display: block; padding: 12px 16px; color: #000; opacity:0.95}
 .dd-menu a:hover { background: #f1f1f1; }
 .hd:hover .dd-menu, .dd .tog:checked ~ .dd-menu { display: block; }
+.HoverBtn .btn-g{ background: #f4511e !important; width: 115%;}
 
 /* ---------- ACCORDION ---------- */
 details { margin-bottom: 0; }
