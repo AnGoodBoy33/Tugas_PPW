@@ -170,10 +170,18 @@ details[open] summary:hover { background: #ccc; }
 .sidenavBTN .btn-g:hover { color:#000 !important; background-color: #ccc !important;}
 
 /* ---------- FIXED SIDEBAR ---------- */
-.fx { height: 280px; overflow: hidden; }
-.fx-side { position: absolute; top: 0; bottom: 0; left: 0; width: 120px; background: #111; padding-top: 12px; }
-.fx-side a { display: block; color: #fff; padding: 10px 14px; font-size: 17px; }
-.fx-main { margin-left: 120px; height: 100%; overflow-y: auto; padding: 4px 16px; font-size: 17px; }
+.fx-container { display: flex; gap: 16px; }
+.fx-box { flex: 1; height: 280px; overflow-y: scroll; border: 3px solid #ccc; background: #fff; }
+.fx-pad { padding: 15px; }
+.fx-wrap { display: flex; gap: 15px; align-items: flex-start !important; }
+.fx-side { align-self: flex-start !important; position: sticky !important; top: 0; bottom: auto !important; background: #e9e9e9; padding: 15px 20px; flex-shrink: 0; height: auto !important; }
+.fx-side a { display: block; color: #21a1f3; padding: 6px 0; font-size: 19px; }
+.fx-side a:hover { color: #000; }
+.fx-main { flex: 1; font-size: 16px; }
+.fx-main h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; color: #000; }
+.fx-main p { margin-bottom: 14px; line-height: 1.45; color: #000; }
+.fx-tab-title { padding: 15px 15px 0; font-size: 16px; color: #000; }
+.fx-tab-demo { margin: 15px; }
 
 /* ---------- SLIDESHOW (radio + label, tanpa JS) ---------- */
 .rs { position: relative; }
