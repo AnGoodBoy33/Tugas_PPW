@@ -1,3 +1,14 @@
+@keyframes slideTurun {
+  from {
+    transform: translateY(-100%); 
+    opacity: 0; 
+  }
+  to {
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
 /* ---------- BASE ---------- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif; font-size: 17px; line-height: 1.45; color: #000; background: #f1f1f1; padding-top: 110px; }
@@ -115,6 +126,8 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
 /* ---------- MODAL (Login, Modal Box, Modal Image) ---------- */
 .modal { display: none; position: fixed; inset: 0; z-index: 250; background: rgba(0, 0, 0, .5); align-items: center; justify-content: center; }
 .tog:checked ~ .modal { display: flex; }
+.Modal-btn .btn-g { color: #fff !important; background-color: #009688 !important; }
+.Modal-btn .btn-g:hover { color: #000 !important; background-color: #ccc !important; }
 .mbox { position: relative; width: 360px; background: #fff; border-radius: 4px; overflow: hidden; box-shadow: 0 4px 16px rgba(0, 0, 0, .4); }
 .avatar { width: 110px; height: 110px; margin: 30px auto 0; border-radius: 50%; object-fit: cover; background: #ddd; }
 .mbody { padding: 16px 24px 8px; }
@@ -124,12 +137,14 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
 .mbody button { width: 100%; padding: 12px; border: 0; border-radius: 3px; background: #04aa6d; color: #fff; font: inherit; font-size: 17px; cursor: pointer; }
 .mfoot { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; background: #f1f1f1; font-size: 15px; }
 .cancel { background: #ddd; padding: 8px 14px; border-radius: 3px; font-weight: 600; cursor: pointer; }
-.mbox2 { width: 520px; background: #fff; overflow: hidden; }
-.mh { position: relative; background: #04aa6d; color: #fff; padding: 14px 18px; font-size: 26px; }
-.mh .x {color: #fff;}
-.mh .x:hover {     color: #000 !important; background-color: #ccc !important; }
-.mbd { padding: 18px; font-size: 18px; }
-.mf { background: #04aa6d; color: #fff; padding: 12px 18px; text-align: right; font-size: 17px; }
+.mbox2 { width: 620px; background: #fff; overflow: hidden; animation: slideTurun 0.5s cubic-bezier(0.32, 0, 0.67, 0) forwards; }
+.mh { position: relative; background-color: #009688; color: #fff; padding: 24px 18px; font-size: 30px; }
+.mh .x { position: absolute; top: 0; right: 0; padding: 24px 30px; color: #fff; font-size: 30px; font-weight: bold; line-height: 1; cursor: pointer; }
+.mh .x:hover { color: #000 !important; background-color: #ccc !important; }
+.mbd { padding: 24px 18px; font-size: 18px; }
+.btn-w3 { display: inline-block; padding: 8px 16px; text-decoration: none; color: #fff !important; background-color: #009688 !important; }
+.btn-w3:hover { color: #000 !important; background-color: #ccc !important; }
+.mf { background-color: #009688; color: #fff; padding: 24px 18px; text-align: left; font-size: 20px; }
 .mimg { position: relative; max-width: 90vw; }
 .mimg img { max-height: 80vh; margin: 0 auto; }
 .mimg p { color: #fff; text-align: center; padding: 8px; font-size: 18px; }
