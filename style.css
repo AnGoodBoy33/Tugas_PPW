@@ -8,6 +8,7 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
 .tog { position: absolute; opacity: 0; pointer-events: none; }
 .btn-g { display: inline-block; background: #04aa6d; color: #fff; padding: 12px 18px; border-radius: 4px; font-size: 17px; cursor: pointer; margin: 4px 6px 4px 0; }
 .learn { display: inline-block; background: #04aa6d; color: #fff; font-weight: 700; font-size: 18px; padding: 12px 18px; border-radius: 4px; }
+.learn:hover { background: #059862!important; }
 .x { position: absolute; top: 4px; right: 12px; font-size: 32px; line-height: 1; color: #818181; cursor: pointer; z-index: 5; }
 .x:hover { color: #fff; }
 
