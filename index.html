@@ -255,15 +255,18 @@
       <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
     </section>
 
-    <!-- 6. SIDE NAVIGATION -->
+<!-- 6. SIDE NAVIGATION -->
     <section class="card">
       <h2>Side Navigation</h2>
       <div class="demo sd">
         <input class="tog" type="checkbox" id="sn1"><input class="tog" type="checkbox" id="sn2">
-        <label class="btn-g" for="sn1">Sidenav overlay</label>
-        <label class="btn-g" for="sn2">Sidenav w/opacity</label>
-        <div class="sn sn1"><label class="x" for="sn1">×</label><a href="#">About</a><a href="#">Services</a><a href="#">Clients</a><a href="#">Contact</a></div>
-        <div class="sn sn2 sn-op"><label class="x" for="sn2">×</label><a href="#">About</a><a href="#">Services</a><a href="#">Clients</a><a href="#">Contact</a></div>
+        <div class="sidenavBTN"> 
+          <label class="btn-g" for="sn1" onclick="if(document.getElementById('sn2').checked){document.getElementById('sn1').checked=false;document.getElementById('sn2').checked=false;event.preventDefault();}else if(document.getElementById('sn1').checked){event.preventDefault();}">Sidenav overlay</label>
+          <br>
+          <label class="btn-g" for="sn2" onclick="if(document.getElementById('sn2').checked){event.preventDefault();}else if(document.getElementById('sn1').checked){document.getElementById('sn1').checked=false;document.getElementById('sn2').checked=true;event.preventDefault();}">Sidenav w/opacity</label>
+        </div>
+        <div class="sn sn1 sn2"><label class="x" onclick="document.getElementById('sn1').checked=false;document.getElementById('sn2').checked=false;">×</label><a href="#">About</a><a href="#">Services</a><a href="#">Clients</a><a href="#">Contact</a></div>
+        <div class="sn-op" onclick="document.getElementById('sn1').checked=false;document.getElementById('sn2').checked=false;"></div>
       </div>
       <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
     </section>
