@@ -8,7 +8,8 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
 .tog { position: absolute; opacity: 0; pointer-events: none; }
 .btn-g { display: inline-block; background: #04aa6d; color: #fff; padding: 12px 18px; border-radius: 4px; font-size: 17px; cursor: pointer; margin: 4px 6px 4px 0; }
 .learn { display: inline-block; background: #04aa6d; color: #fff; font-weight: 700; font-size: 18px; padding: 12px 18px; border-radius: 4px; }
-.x { position: absolute; top: 4px; right: 12px; font-size: 32px; line-height: 1; color: #000; cursor: pointer; z-index: 5; }
+.x { position: absolute; top: 4px; right: 12px; font-size: 32px; line-height: 1; color: #818181; cursor: pointer; z-index: 5; }
+.x:hover { color: #fff; }
 
 /* ---------- HEADER (fixed) ---------- */
 .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: #fff; }
@@ -120,7 +121,8 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
 .cancel { background: #ddd; padding: 8px 14px; border-radius: 3px; font-weight: 600; cursor: pointer; }
 .mbox2 { width: 520px; background: #fff; overflow: hidden; }
 .mh { position: relative; background: #04aa6d; color: #fff; padding: 14px 18px; font-size: 26px; }
-.mh .x { color: #fff; }
+.mh .x {color: #fff;}
+.mh .x:hover {     color: #000 !important; background-color: #ccc !important; }
 .mbd { padding: 18px; font-size: 18px; }
 .mf { background: #04aa6d; color: #fff; padding: 12px 18px; text-align: right; font-size: 17px; }
 .mimg { position: relative; max-width: 90vw; }
@@ -306,7 +308,7 @@ details p { padding: 12px 16px; border: 1px solid #ddd; border-top: 0; backgroun
   .tabs a { padding: 0 10px; }
 }
 
-/* ---------- TAMBAHAN: SHARE & PAGINATION ATAS ---------- */
+/* ---------- SHARE & PAGINATION ATAS ---------- */
 .main { position: relative; }
 .share-row { position: absolute; top: 4px; right: 24px; display: flex; align-items: center; gap: 8px; z-index: 2; }
 .share-label { font-size: 16px; font-weight: 700; letter-spacing: 1px; color: #1f4d3f; margin-right: 4px; }
@@ -320,7 +322,7 @@ details p { padding: 12px 16px; border: 1px solid #ddd; border-top: 0; backgroun
   .share-row { position: static; justify-content: flex-start; margin-bottom: 12px; }
 }
 
-/* ---------- TAMBAHAN: PROMO SPACES ---------- */
+/* ---------- PROMO SPACES ---------- */
 .promo-card { background: #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, .25); padding: 30px 20px; margin: 0 0 40px; text-align: center; }
 .promo-card h3 { font-size: 26px; font-weight: 600; margin-bottom: 8px; }
 .promo-card p { font-size: 17px; margin-bottom: 8px; }
@@ -328,11 +330,11 @@ details p { padding: 12px 16px; border: 1px solid #ddd; border-top: 0; backgroun
 .promo-sign a { color: #04aa6d; font-weight: 600; }
 .promo-img { margin: 16px auto 0; max-width: 300px; }
 
-/* ---------- TAMBAHAN: HOVER PAGINATION ---------- */
+/* ---------- HOVER PAGINATION ---------- */
 .pag a { transition: background-color .3s; }
 .pag a:hover:not(.on):not(.dis) { background: #ddd; }
 
-/* ---------- TAMBAHAN: PENYESUAIAN LAYOUT & DETAIL ---------- */
+/* ---------- PENYESUAIAN LAYOUT & DETAIL ---------- */
 .main { background: #fff; }
 .main > h1 { order: -2; font-size: 56px; font-weight: 400; line-height: 1.2; margin-top: 4px; }
 .pag.pag-top { order: -1; }
@@ -366,7 +368,8 @@ details p { padding: 12px 16px; border: 1px solid #ddd; border-top: 0; backgroun
 .sn { position: fixed; top: 0; left: 0; height: 100vh; width: 0; z-index: 250; padding-top: 227px; background: #111; transition: width .5s; overflow: hidden; }
 #sn1:checked ~ .sn1, #sn2:checked ~ .sn2 { width: 307px; }
 .sn-op { background: #111; }
-.sn a { padding: 11px 34px; font-size: 30px; color: #fff; }
-.sn > .x { top: 178px; right: 48px; font-size: 40px; }
+.sn a { padding: 11px 34px; font-size: 30px; color: #818181; }
+.sn a:hover { color: #fff; }
+.sn > .x { top: 178px; right: 48px; font-size: 40px;  }
 .site-header { z-index: 200; }
 body:has(#sn2:checked)::after { content: ""; position: fixed; inset: 0; background: rgba(0, 0, 0, .5); z-index: 150; pointer-events: none; }
