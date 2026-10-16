@@ -28,6 +28,7 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
 .tabs { display: flex; align-items: stretch; height: 40px; background: #282a35; overflow: hidden; }
 .tabs a { display: flex; align-items: center; padding: 0 16px; color: #fff; font-size: 17px; font-weight: 600; white-space: nowrap; }
 .tabs a.on { background: #fff; color: #282a35; }
+.tabs a:hover { background: #000;}
 .tabs a.arr { margin-left: auto; font-size: 22px; }
 
 /* ---------- SIDEBAR (fixed, scroll sendiri) ---------- */
