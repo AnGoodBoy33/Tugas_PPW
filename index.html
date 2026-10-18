@@ -346,43 +346,132 @@
     </section>
 
     <!-- 10. LIGHTBOX (klik gambar untuk membuka) -->
-    <section class="card">
-      <h2>Lightbox</h2>
-      <div class="demo gal">
-        <a href="#lb1"><img src="nature-wide.jpg" alt="Nature"></a>
-        <a href="#lb2"><img src="snow-wide.jpg" alt="Snow"></a>
-        <a href="#lb3"><img src="mountains-wide.jpg" alt="Mountains"></a>
-      </div>
-      <div class="lb" id="lb1"><img src="nature-wide.jpg" alt=""><a class="lbp" href="#lb3">❮</a><a class="lbn" href="#lb2">❯</a><a class="lbx" href="#none">×</a></div>
-      <div class="lb" id="lb2"><img src="snow-wide.jpg" alt=""><a class="lbp" href="#lb1">❮</a><a class="lbn" href="#lb3">❯</a><a class="lbx" href="#none">×</a></div>
-      <div class="lb" id="lb3"><img src="mountains-wide.jpg" alt=""><a class="lbp" href="#lb2">❮</a><a class="lbn" href="#lb1">❯</a><a class="lbx" href="#none">×</a></div>
-      <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
-    </section>
+    
+   <section class="card">
+     <h2>Lightbox</h2>
+     <div class="demo gal">
+       <div class="nature-gal"><a href="#lb1"><img src="nature-wide.jpg" alt="Nature and sunrise"></a></div>
+       <div class="snow-gal"><a href="#lb2"><img src="snow-wide.jpg" alt="Snow"></a></div>
+       <div class="mountains-gal"><a href="#lb3"><img src="mountains-wide.jpg" alt="Mountains and fjords"></a></div>
+     </div>
+     <div class="lb" id="lb1">
+       <div class="lb-content">
+         <a class="lbx" href="#none">×</a>
+         <img class="lb-image" src="nature-wide.jpg" alt="Nature and sunrise">
+         <div class="lb-controls">
+           <a class="lbp" href="#lb3">❮</a>
+           <p>Nature and sunrise</p>
+           <a class="lbn" href="#lb2">❯</a>
+         </div>
+         <div class="lb-thumbs">
+           <a class="active" href="#lb1"><img src="nature-wide.jpg" alt="Nature and sunrise"></a>
+           <a href="#lb2"><img src="snow-wide.jpg" alt="Snow"></a>
+           <a href="#lb3"><img src="mountains-wide.jpg" alt="Mountains and fjords"></a>
+         </div>
+       </div>
+     </div>
+     <div class="lb" id="lb2">
+       <div class="lb-content">
+         <a class="lbx" href="#none">×</a>
+         <img class="lb-image" src="snow-wide.jpg" alt="Snow">
+         <div class="lb-controls">
+           <a class="lbp" href="#lb1">❮</a>
+           <p>Snow</p>
+           <a class="lbn" href="#lb3">❯</a>
+         </div>
+         <div class="lb-thumbs">
+           <a href="#lb1"><img src="nature-wide.jpg" alt="Nature and sunrise"></a>
+           <a class="active" href="#lb2"><img src="snow-wide.jpg" alt="Snow"></a>
+           <a href="#lb3"><img src="mountains-wide.jpg" alt="Mountains and fjords"></a>
+         </div>
+       </div>
+     </div>
+     <div class="lb" id="lb3">
+       <div class="lb-content">
+         <a class="lbx" href="#none">×</a>
+         <img class="lb-image" src="mountains-wide.jpg" alt="Mountains and fjords">
+         <div class="lb-controls">
+           <a class="lbp" href="#lb2">❮</a>
+           <p>Mountains and fjords</p>
+           <a class="lbn" href="#lb1">❯</a>
+         </div>
+         <div class="lb-thumbs">
+           <a href="#lb1"><img src="nature-wide.jpg" alt="Nature and sunrise"></a>
+           <a href="#lb2"><img src="snow-wide.jpg" alt="Snow"></a>
+           <a class="active" href="#lb3"><img src="mountains-wide.jpg" alt="Mountains and fjords"></a>
+         </div>
+       </div>
+     </div>
+     <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
+   </section>
 
     <!-- 11. SLIDESHOW GALLERY -->
-    <section class="card">
-      <h2>Slideshow Gallery</h2>
-      <div class="demo rs">
-        <input type="radio" name="g2" id="b1" checked><input type="radio" name="g2" id="b2"><input type="radio" name="g2" id="b3"><input type="radio" name="g2" id="b4"><input type="radio" name="g2" id="b5"><input type="radio" name="g2" id="b6">
-        <div class="slides">
-          <div><img src="woods-wide.jpg" alt=""><<span class="num">1 / 6</span><label class="prev" for="b6">❮</label><label class="next" for="b2">❯</label></div>
-          <div><img src="5terre-wide.jpg" alt=""><<span class="num">2 / 6</span><label class="prev" for="b1">❮</label><label class="next" for="b3">❯</label></div>
-          <div><img src="mountains-wide.jpg" alt=""><<span class="num">3 / 6</span><label class="prev" for="b2">❮</label><label class="next" for="b4">❯</label></div>
-          <div><img src="lights-wide.jpg" alt=""><<span class="num">4 / 6</span><label class="prev" for="b3">❮</label><label class="next" for="b5">❯</label></div>
-          <div><img src="nature-wide.jpg" alt=""><<span class="num">5 / 6</span><label class="prev" for="b4">❮</label><label class="next" for="b6">❯</label></div>
-          <div><img src="snow-wide.jpg" alt=""><<span class="num">6 / 6</span><label class="prev" for="b5">❮</label><label class="next" for="b1">❯</label></div>
-        </div>
-        <div class="thumbs">
-          <label for="b1"><img src="woods-wide.jpg" alt=""></label>
-          <label for="b2"><img src="5terre-wide.jpg" alt=""></label>
-          <label for="b3"><img src="mountains-wide.jpg" alt=""></label>
-          <label for="b4"><img src="lights-wide.jpg" alt=""></label>
-          <label for="b5"><img src="nature-wide.jpg" alt=""></label>
-          <label for="b6"><img src="snow-wide.jpg" alt=""></label>
-        </div>
-      </div>
-      <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
-    </section>
+
+   <section class="card">
+     <h2>Slideshow Gallery</h2>
+     <div class="demo rs">
+       <input type="radio" name="g2" id="b1" checked>
+       <input type="radio" name="g2" id="b2">
+       <input type="radio" name="g2" id="b3">
+       <input type="radio" name="g2" id="b4">
+       <input type="radio" name="g2" id="b5">
+       <input type="radio" name="g2" id="b6">
+       <div class="slides">
+         <div>
+           <span class="num">1 / 6</span>
+           <img src="woods-wide.jpg" alt="The Woods">
+           <label class="prev" for="b6">❮</label>
+           <label class="next" for="b2">❯</label>
+           <div class="cap">The Woods</div>
+         </div>
+         <div>
+           <span class="num">2 / 6</span>
+           <img src="5terre-wide.jpg" alt="Cinque Terre">
+           <label class="prev" for="b1">❮</label>
+           <label class="next" for="b3">❯</label>
+           <div class="cap">Cinque Terre</div>
+         </div>
+         <div>
+           <span class="num">3 / 6</span>
+           <img src="mountains-wide.jpg" alt="Mountains and fjords">
+           <label class="prev" for="b2">❮</label>
+           <label class="next" for="b4">❯</label>
+           <div class="cap">Mountains and fjords</div>
+         </div>
+         <div>
+           <span class="num">4 / 6</span>
+           <img src="lights-wide.jpg" alt="Northern Lights">
+           <label class="prev" for="b3">❮</label>
+           <label class="next" for="b5">❯</label>
+           <div class="cap">Northern Lights</div>
+         </div>
+         <div>
+           <span class="num">5 / 6</span>
+           <img src="nature-wide.jpg" alt="Nature and sunrise">
+           <label class="prev" for="b4">❮</label>
+           <label class="next" for="b6">❯</label>
+           <div class="cap">Nature and sunrise</div>
+         </div>
+         <div>
+           <span class="num">6 / 6</span>
+           <img src="snow-wide.jpg" alt="Snowy Mountains">
+           <label class="prev" for="b5">❮</label>
+           <label class="next" for="b1">❯</label>
+           <div class="cap">Snowy Mountains</div>
+         </div>
+       </div>
+       <div class="thumbs">
+         <label for="b1"><img src="woods-wide.jpg" alt="The Woods"></label>
+         <label for="b2"><img src="5terre-wide.jpg" alt="Cinque Terre"></label>
+         <label for="b3"><img src="mountains-wide.jpg" alt="Mountains and fjords"></label>
+         <label for="b4"><img src="lights-wide.jpg" alt="Northern Lights"></label>
+         <label for="b5"><img src="nature-wide.jpg" alt="Nature and sunrise"></label>
+         <label for="b6"><img src="snow-wide.jpg" alt="Snowy Mountains"></label>
+       </div>
+     </div>
+     <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
+   </section>
+
 
     <!-- 12. IMAGE HOVER OVERLAY -->
     <section class="card">
@@ -530,20 +619,22 @@
     <!-- 22. CHANGE BACKGROUND ON SCROLL -->
     
     <section class="card">
-      <h2>Change Background on Scroll</h2>
-      <div class="demo">
-        <div class="cbs">
-          <img src="slideshow2.jpg" alt="">
-          <img src="slideshow3.jpg" alt="">
-          <img src="slideshow4.jpg" alt="">
-          <img src="slideshow1.jpg" alt="">
-          <img src="5terre-wide.jpg" alt="">
-          <img src="woods-wide.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-        </div>
-      </div>
-      <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
-    </section>
+     <h2>Change Background on Scroll</h2>
+     <div class="demo">
+       <div class="cbs-frame">
+         <div class="cbs">
+           <div class="bg-image img1"></div>
+           <div class="bg-image img2"></div>
+           <div class="bg-image img3"></div>
+           <div class="bg-image img4"></div>
+           <div class="bg-image img5"></div>
+           <div class="bg-image img6"></div>
+         </div>
+         <div class="cbs-text">TEXT</div>
+       </div>
+     </div>
+     <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
+   </section>
 
 
     </div>
