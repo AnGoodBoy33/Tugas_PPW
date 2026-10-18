@@ -303,7 +303,7 @@ details[open] summary:hover { background: #ccc; }
 .overlay-box:hover .overlay { opacity: 1; }
 
 /* ---------- TOP NAVIGATION ---------- */
-.tnav { display: flex; align-items: center; background: #333; }
+.tnav { display: flex; align-items: center; background: #000 !important; }
 .tnav a { color: #fff; padding: 14px 18px; font-size: 18px; }
 .tnav a:hover { background: #ddd; color: #000; }
 .tnav a.on { background: #04aa6d; }
@@ -329,6 +329,11 @@ details[open] summary:hover { background: #ccc; }
 
 /* ---------- LOGIN FORM IN NAVBAR ---------- */
 .lnav { display: flex; align-items: center; flex-wrap: wrap; background: #e7e7e7; height: 66px; }
+
+.lnav .lnav-about:hover { background-color:#ddd !important; }
+.lnav .lnav-contact:hover { background-color:#ddd !important; }
+.lnav .lnav-about > a { padding: 0 20px; height: 66px; line-height: 66px; font-size: 22px; color: #000; }
+.lnav .lnav-contact > a { padding: 0 20px; height: 66px; line-height: 66px; font-size: 22px; color: #000; }
 .lnav > a { padding: 0 20px; height: 66px; line-height: 66px; font-size: 22px; color: #000; }
 .lnav > a.on { background: #2196f3; color: #fff; }
 .lnav form { margin-left: auto; display: flex; gap: 8px; padding: 0 10px; }
