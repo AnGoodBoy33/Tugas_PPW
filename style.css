@@ -41,11 +41,17 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
 .new i { position: absolute; top: -12px; right: -20px; background: #ffd21f; font-size: 10px; font-style: normal; font-weight: 700; padding: 2px 6px; border-radius: 9px; }
 .paid { background: #8b5cf6; color: #fff; padding: 10px 18px; border-radius: 22px; }
 .signin { background: #04aa6d; color: #fff; padding: 10px 22px; border-radius: 22px; font-weight: 600; }
-.tabs { display: flex; align-items: stretch; height: 40px; background: #282a35; overflow: hidden; }
-.tabs a { display: flex; align-items: center; padding: 0 16px; color: #fff; font-size: 17px; font-weight: 600; white-space: nowrap; }
+.tabs { position: relative; display: flex; height: 40px; background: #282a35; }
+.tabs-track { display: flex; flex: 1; min-width: 0; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; }
+.tabs-track::-webkit-scrollbar { display: none; }
+.tabs a { display: flex; flex: none; align-items: center; padding: 0 16px; color: #fff; font-size: 17px; font-weight: 600; white-space: nowrap; }
 .tabs a.on { background: #fff; color: #282a35; }
-.tabs a:hover { background: #000;}
-.tabs a.arr { margin-left: auto; font-size: 22px; }
+.tabs a:hover { background: #000; }
+.tabs-btn { display: none; position: absolute; top: 0; bottom: 0; z-index: 2; width: 38px; padding: 0; border: 0; background: #282a35; color: #fff; font-size: 24px; line-height: 1; cursor: pointer; }
+.tabs-btn:hover { background: #000; }
+.tabs-prev { left: 0; }
+.tabs-next { right: 0; }
+.tabs.can-prev .tabs-prev, .tabs.can-next .tabs-next { display: block; }
 
 /* ---------- SIDEBAR (fixed, scroll sendiri) ---------- */
 .side { position: sticky; top: 110px; flex: 0 0 230px; height: calc(100vh - 110px); align-self: flex-start; background: #fff; overflow-y: auto; border-right: 1px solid #e2e2e2; padding-bottom: 30px; }
@@ -84,40 +90,8 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
 .foot p { color: #ccc; margin: 6px 0; }
 
 /* ---------- ADVENTURE BANNER (tampil sebelum footer) ---------- */
-.adventure { order: 99; position: relative; height: 425px; overflow: hidden; margin: 0 0 36px; background: linear-gradient(#d4e8f2 0%, #e7f3f9 37%, #94be77 37%, #6fa04f 100%); }
-.scene { position: absolute; left: 0; bottom: 0; width: 100%; height: 170px; object-fit: fill; }
-.progress-card { position: absolute; left: 10px; top: 27px; z-index: 3; width: 258px; padding: 16px; background: #fff; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, .15); }
-.progress-card small { font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #0b6e4f; text-transform: uppercase; }
-.progress-card h3 { margin: 4px 0 12px; }
-.stats { border: 1px solid #e5e5e5; border-radius: 6px; }
-.stats div { display: flex; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #eee; font-size: 15px; }
-.stats div:last-child { border-bottom: 0; }
-.signin-b { display: block; margin-top: 16px; padding: 12px; background: #04aa6d; color: #fff; text-align: center; border-radius: 6px; font-size: 16px; font-weight: 600; }
-.adv-text { position: absolute; left: 337px; top: 42px; z-index: 2; }
-.adv-new { font-size: 13px; font-weight: 700; letter-spacing: 3px; color: #8a5a2b; }
-.adv-text h2 { font-size: 34px; font-weight: 600; margin: 6px 0 4px; color: #111; }
-.adv-text p { font-size: 17px; color: #333; margin-bottom: 18px; }
-.badges { display: flex; gap: 20px; flex-wrap: wrap; }
-.badge { display: flex; align-items: center; gap: 12px; width: 210px; height: 60px; padding: 0 14px; background: #000; color: #fff; border-radius: 8px; }
-.badge:hover { opacity: .85; }
-.badge img { width: 30px; height: 30px; }
-.badge small { display: block; font-size: 11px; }
-.badge b { display: block; font-size: 20px; font-weight: 600; line-height: 1.1; }
-.decor { position: absolute; z-index: 1; height: auto; }
-.sign     { left: 44.3%; top: 235px; width: 155px; }
-.mascot   { left: 58.2%; top: 262px; width: 92px; }
-.tree-1   { left: 87.9%; top: 90px;  width: 80px; }
-.tree-2   { left: 92.9%; top: 135px; width: 90px; }
-.tree-3   { left: 81.9%; top: 150px; width: 80px; }
-.tree-4   { left: 70.4%; top: 182px; width: 82px; }
-.stump-1  { left: 53.0%; top: 370px; width: 40px; }
-.stump-2  { left: 73.6%; top: 364px; width: 40px; }
-.stone-1  { left: 63.5%; top: 382px; width: 40px; }
-.stone-2  { left: 91.7%; top: 380px; width: 40px; }
-.mushroom { left: 69.3%; top: 380px; width: 24px; }
-.chest    { left: 94.0%; top: 327px; width: 76px; }
-.bubble { position: absolute; left: 62.5%; top: 260px; z-index: 2; width: 250px; padding: 16px 20px; background: #fff; border: 3px solid #000; font-family: "Courier New", monospace; font-size: 16px; font-weight: 700; color: #000; }
-.bubble::before { content: ""; position: absolute; left: -17px; top: 24px; border-style: solid; border-width: 8px 14px 8px 0; border-color: transparent #000 transparent transparent; }
+.adventure { order: 99; margin: 0 0 36px; }
+.adventure img { display: block; width: 100%; height: auto; }
 
 /* ---------- CARD ---------- */
 .card { position: relative; background: #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, .25); padding: 20px 20px 0; margin: 0 12px 40px; }
@@ -337,13 +311,9 @@ details[open] summary:hover { background: #ccc; }
 
 /* ---------- CHANGE BACKGROUND ON SCROLL ---------- */
 .cbs { height: 420px; overflow-y: auto; clip-path: inset(0); }
-.cbs-bg { position: relative; height: 420px; clip-path: inset(0); background-position: center; 
-  background-repeat: no-repeat; background-size: cover; }
+.cbs-bg { position: relative; height: 420px; clip-path: inset(0); background-position: center; background-repeat: no-repeat; background-size: cover; }
 .cbs-bg::before { content: ""; position: fixed; inset: 0; background: inherit; }
-.cbs-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-  padding: 20px 40px; color: #fff; font: 700 48px/1.2 Arial, Helvetica, sans-serif; 
-  letter-spacing: 2px; background: rgba(0, 0, 0, .5); border: 8px solid #fff; 
-  pointer-events: none; }
+.cbs-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px 40px; color: #fff; font: 700 48px/1.2 Arial, Helvetica, sans-serif; letter-spacing: 2px; background: rgba(0, 0, 0, .5); border: 8px solid #fff; pointer-events: none; }
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 1200px) {
@@ -351,8 +321,6 @@ details[open] summary:hover { background: #ccc; }
   .main { margin-right: 0; }
 }
 @media (max-width: 900px) {
-  .decor, .bubble, .progress-card { display: none; }
-  .adv-text { left: 20px; top: 40px; }
   .side { display: none; }
   .main { margin-left: 0; }
   .tabs a { padding: 0 10px; }
