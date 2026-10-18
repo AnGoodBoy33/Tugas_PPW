@@ -37,7 +37,7 @@
     </nav>
   </header>
 
-  <!-- ===== SIDEBAR (fixed, bisa di-scroll sendiri) ===== -->
+  <!-- ===== SIDEBAR ===== -->
   <div class="wrap">
 
   <aside class="side">
@@ -150,7 +150,7 @@
     <h1>W3Schools How TO</h1>
     <p style="margin-bottom: 20px;">Code snippets for HTML, CSS and JavaScript.</p>
 
-    <!-- TAMBAHAN: SHARE -->
+    <!-- SHARE -->
     <div class="share-row">
       <span class="share-label">SHARE</span>
       <a class="share-btn" href="#" aria-label="Bagikan ke X"><span class="sh-x">X</span></a>
@@ -159,7 +159,7 @@
       <a class="share-btn" href="#" aria-label="Salin tautan"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#111" stroke-width="1.8"><rect x="1.5" y="6" width="8" height="4" rx="2" transform="rotate(-45 5.5 8)"/><rect x="6.5" y="6" width="8" height="4" rx="2" transform="rotate(-45 10.5 8)"/></svg></a>
     </div>
 
-    <!-- TAMBAHAN: PAGINATION ATAS -->
+    <!-- PAGINATION ATAS -->
     <nav class="pag pag-top">
       <a class="dis" href="#">‹</a><a class="on" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a>
       <a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">›</a>
@@ -167,19 +167,15 @@
 
 
     <div class="cards-wrap">
-    <!-- 1. SLIDESHOW (panah ❮ ❯ dan titik) -->
+    <!-- 1. SLIDESHOW -->
     <section class="card">
       <h2>Slideshow</h2>
       <div class="demo rs">
         <input type="radio" name="g1" id="a1" checked><input type="radio" name="g1" id="a2"><input type="radio" name="g1" id="a3"><input type="radio" name="g1" id="a4">
         <div class="slides">
-          <!-- GAMBAR: nature-wide.jpg -->
           <div><img src="slideshow1.jpg" alt=""><span class="num">1 / 4</span><span class="cap">Caption Text</span><label class="prev" for="a4">❮</label><label class="next" for="a2">❯</label></div>
-          <!-- GAMBAR: snow-wide.jpg -->
           <div><img src="slideshow2.jpg" alt=""><span class="num">2 / 4</span><span class="cap">Caption Two</span><label class="prev" for="a1">❮</label><label class="next" for="a3">❯</label></div>
-          <!-- GAMBAR: mountains-wide.jpg -->
           <div><img src="slideshow3.jpg" alt=""><span class="num">3 / 4</span><span class="cap">Caption Three</span><label class="prev" for="a2">❮</label><label class="next" for="a4">❯</label></div>
-          <!-- GAMBAR: lights-wide.jpg -->
           <div><img src="slideshow4.jpg" alt=""><span class="num">4 / 4</span><span class="cap">Caption Four</span><label class="prev" for="a3">❮</label><label class="next" for="a1">❯</label></div>
         </div>
         <div class="dots"><label for="a1"></label><label for="a2"></label><label for="a3"></label><label for="a4"></label></div>
@@ -187,7 +183,7 @@
       <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
     </section>
 
-    <!-- 2. LOGIN FORM (tombol Login membuka modal) -->
+    <!-- 2. LOGIN FORM -->
     <section class="card">
       <h2>Login Form</h2>
       <div class="demo">
@@ -198,7 +194,6 @@
         <div class="modal">
           <form class="mbox">
             <label class="x" for="lg">×</label>
-            <!-- GAMBAR: avatar2.png -->
             <img class="avatar" src="avatar2.png" alt="Avatar">
             <div class="mbody">
               <label>Username</label>
@@ -345,7 +340,7 @@
       <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
     </section>
 
-    <!-- 10. LIGHTBOX (klik gambar untuk membuka) -->
+    <!-- 10. LIGHTBOX -->
     
    <section class="card">
      <h2>Lightbox</h2>
@@ -474,17 +469,17 @@
 
 
     <!-- 12. IMAGE HOVER OVERLAY -->
-    <section class="card">
-      <h2>Image Hover Overlay</h2>
-      <div class="demo">
-        <div class="overlay-box">
-          <!-- GAMBAR: avatar3.png -->
-          <img src="avatar3.png" alt="Avatar">
-          <div class="overlay">Hello World</div>
-        </div>
-      </div>
-      <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
-    </section>
+   <section class="card">
+     <h2>Image Hover Overlay</h2>
+     <div class="demo overlay-demo">
+       <div class="overlay-box">
+         <img src="avatar3.png" alt="Avatar">
+         <div class="overlay">Hello World</div>
+       </div>
+     </div>
+     <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
+   </section>
+
 
     <!-- 13. TABS -->
     <section class="card">
@@ -639,7 +634,7 @@
 
     </div>
 
-    <!-- TAMBAHAN: PROMO SPACES -->
+    <!-- PROMO SPACES -->
     <section class="promo-card">
       <h3>Sudah pernah dengar tentang W3Schools Spaces?</h3>
       <p>Buat situs web Anda sendiri dengan W3Schools Spaces tanpa setup yang rumit. Anda juga bisa menyimpan cuplikan kode favorit.</p>
@@ -660,10 +655,8 @@
 
   </div>
 
-  <!-- BANNER ADVENTURE (selebar layar) -->
     <!-- BANNER ADVENTURE -->
     <section class="adventure">
-      <!-- GAMBAR: adventure-scene.png -->
       <img class="scene" src="adventure-scene.png" alt="">
 
       <div class="progress-card">
@@ -683,43 +676,31 @@
         <h2>Learn in Adventure Mode</h2>
         <p>Coding fundamentals as bite-sized lessons and challenges.</p>
         <div class="badges">
-          <!-- GAMBAR: icon-apple.png -->
           <a class="badge" href="#"><img src="icon-apple.jpg" alt=""><span><small>Download on the</small><b>App Store</b></span></a>
-          <!-- GAMBAR: icon-google-play.png -->
           <a class="badge" href="#"><img src="icon-google-play.png" alt=""><span><small>GET IT ON</small><b>Google Play</b></span></a>
-          <!-- GAMBAR: icon-browser.png -->
           <a class="badge" href="#"><img src="icon-browser.png" alt=""><span><small>TRY NOW IN</small><b>Browser</b></span></a>
         </div>
       </div>
 
-      <!-- GAMBAR: adventure-sign.png -->
       <img class="decor sign" src="adventure-sign.png" alt="">
-      <!-- GAMBAR: mascot-lynx.png -->
       <img class="decor mascot" src="mascot-lynx.png" alt="">
       <div class="bubble">Learn more about<br>Adventure Mode &gt;</div>
 
-      <!-- GAMBAR: tree-1.png s/d tree-4.png -->
       <img class="decor tree-1" src="tree-1.png" alt="">
       <img class="decor tree-2" src="tree-2.png" alt="">
       <img class="decor tree-3" src="tree-3.png" alt="">
       <img class="decor tree-4" src="tree-4.png" alt="">
-      <!-- GAMBAR: stump.png (dipakai 2x) -->
       <img class="decor stump-1" src="stump.png" alt="">
       <img class="decor stump-2" src="stump.png" alt="">
-      <!-- GAMBAR: stone.png (dipakai 2x) -->
       <img class="decor stone-1" src="stone.png" alt="">
       <img class="decor stone-2" src="stone.png" alt="">
-      <!-- GAMBAR: mushroom.png -->
       <img class="decor mushroom" src="mushroom.png" alt="">
-      <!-- GAMBAR: chest.png -->
       <img class="decor chest" src="chest.png" alt="">
     </section>
 
-  <!-- FOOTER (selebar layar) -->
     <!-- FOOTER -->
     <footer class="foot">
       <div class="fhead">
-        <!-- GAMBAR: w3schools-logo-white.png -->
         <img src="w3schools-logo-white.png" alt="W3Schools">
         <a href="#">PLUS</a><a href="#">SPACES</a><a href="#">GET CERTIFIED</a><a href="#">FOR TEACHERS</a><a href="#">PRACTICE</a><a href="#">CONTACT US</a>
       </div>
@@ -734,7 +715,6 @@
           <a href="#">HTML Certificate</a><a href="#">CSS Certificate</a><a href="#">JavaScript Certificate</a><a href="#">Front End Certificate</a><a href="#">SQL Certificate</a><a href="#">Python Certificate</a><a href="#">PHP Certificate</a><a href="#">jQuery Certificate</a><a href="#">Java Certificate</a><a href="#">C++ Certificate</a><a href="#">C# Certificate</a><a href="#">XML Certificate</a></div>
       </div>
       <div class="fsocial">
-        <!-- GAMBAR: social-youtube.png, social-linkedin.png, social-discord.png, social-facebook.png, social-instagram.png -->
         <img src="social-youtube.png" alt="">
         <img src="social-linkedin.png" alt="">
         <img src="social-discord.png" alt="">
