@@ -512,23 +512,39 @@
     </section>
 
     <!-- 15. TAB IMAGE GALLERY -->
-    <section class="card">
-      <h2>Tab Image Gallery</h2>
-      <div class="demo tg tgi">
-        <input type="radio" name="t3" id="t3a" checked><input type="radio" name="t3" id="t3b"><input type="radio" name="t3" id="t3c">
-        <div class="nav">
-          <label for="t3a"><img src="nature-wide.jpg" alt=""></label>
-          <label for="t3b"><img src="snow-wide.jpg" alt=""></label>
-          <label for="t3c"><img src="lights-wide.jpg" alt=""></label>
-        </div>
-        <div class="panes">
-          <div><img src="nature-wide.jpg" alt=""><p>Nature</p></div>
-          <div><img src="snow-wide.jpg" alt=""><p>Snow</p></div>
-          <div><img src="lights-wide.jpg" alt=""><p>Northern Lights</p></div>
-        </div>
-      </div>
-      <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
-    </section>
+    
+   <section class="card">
+     <h2>Tab Image Gallery</h2>
+     <div class="demo tg tgi">
+       <input type="radio" name="t3" id="t3a" checked>
+       <input type="radio" name="t3" id="t3b">
+       <input type="radio" name="t3" id="t3c">
+       <input type="radio" name="t3" id="t3close">
+       <div class="nav ti-gallery">
+         <label for="t3a"><img src="nature-wide.jpg" alt="Nature"></label>
+         <label for="t3b"><img src="snow-wide.jpg" alt="Snow"></label>
+         <label for="t3c"><img src="lights-wide.jpg" alt="Northern Lights"></label>
+       </div>
+       <div class="panes">
+         <div>
+           <img src="nature-wide.jpg" alt="Nature">
+           <label class="tgi-close" for="t3close">&times;</label>
+           <p class="tgi-caption">Nature</p>
+         </div>
+         <div>
+           <img src="snow-wide.jpg" alt="Snow">
+           <label class="tgi-close" for="t3close">&times;</label>
+           <p class="tgi-caption">Snow</p>
+         </div>
+         <div>
+           <img src="lights-wide.jpg" alt="Northern Lights">
+           <label class="tgi-close" for="t3close">&times;</label>
+           <p class="tgi-caption">Northern Lights</p>
+         </div>
+       </div>
+     </div>
+     <div class="card-foot"><a class="learn" href="#">Learn How To »</a></div>
+   </section>
 
     <!-- 16. ALERT BUTTONS -->
     <section class="card">

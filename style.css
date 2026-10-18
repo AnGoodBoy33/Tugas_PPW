@@ -278,38 +278,77 @@ details[open] summary:hover { background: #ccc; }
 
 
 /* ---------- TABS (radio, gaya W3: kotak abu, tab aktif lebih gelap) ---------- */
+
+.ti-gallery { border: none !important; background: #fff !important; }
 .tg > input { position: absolute; opacity: 0; pointer-events: none; }
 .nav { display: flex; background: #f1f1f1; border: 1px solid #ccc; }
 .nav > label { padding: 14px 16px; font-size: 17px; cursor: pointer; }
 .nav > label:hover { background: #ddd; }
 .panes > div { display: none; border: 1px solid #ccc; border-top: 0; padding: 6px 12px 12px; }
 .panes h3 { margin-top: 6px; }
+
 .tg > input:nth-of-type(1):checked ~ .nav > :nth-child(1),
 .tg > input:nth-of-type(2):checked ~ .nav > :nth-child(2),
 .tg > input:nth-of-type(3):checked ~ .nav > :nth-child(3) { background: #ccc; }
+
 .tg > input:nth-of-type(1):checked ~ .panes > :nth-child(1),
 .tg > input:nth-of-type(2):checked ~ .panes > :nth-child(2),
 .tg > input:nth-of-type(3):checked ~ .panes > :nth-child(3) { display: block; }
+
 .vert { display: flex; }
 .vert .nav { flex-direction: column; width: 30%; height: 300px; }
 .vert .nav > label { padding: 22px 16px; width: 100%; }
 .vert .panes { flex: 1; height: 300px; }
 .vert .panes > div { height: 100%; border-left: 0; border-top: 1px solid #ccc; padding: 6px 12px; }
-.tgi .nav > label { padding: 6px; }
-.tgi .nav img { width: 130px; height: 80px; object-fit: cover; }
-.tgi .panes img { width: 100%; height: 300px; object-fit: cover; }
+
+.tgi .nav { display: flex; gap: 16px; margin-bottom: 16px; background: #fff; border: none; }
+.tgi .nav > label { flex: 1; min-width: 0; padding: 0; background: transparent; cursor: pointer; }
+.tgi .nav > label:hover { background: transparent; }
+.tgi .nav img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; opacity: .7; transition: opacity .3s; }
+.tgi .nav > label:hover img { opacity: 1; }
+
+.tgi .panes > div { position: relative; padding: 0; border: none; }
+.tgi .panes img { display: block; width: 100%; height: 360px; object-fit: cover; }
+.tgi .tgi-caption { position: absolute; left: 0; bottom: 0; margin: 0; padding: 12px 16px; color: #fff; font-size: 20px; }
+.tgi .tgi-close { position: absolute; top: 0; right: 0; display: flex; align-items: center; justify-content: center; width: 55px; height: 55px; color: #fff; background: transparent; font-size: 35px; line-height: 1; cursor: pointer; transition: background .3s, color .3s; }
+.tgi .tgi-close:hover { color: #000; background: #ccc; }
+
+.tgi > input:nth-of-type(1):checked ~ .nav > :nth-child(1),
+.tgi > input:nth-of-type(2):checked ~ .nav > :nth-child(2),
+.tgi > input:nth-of-type(3):checked ~ .nav > :nth-child(3) { background: transparent; }
+
+.tgi > input:nth-of-type(1):checked ~ .nav > :nth-child(1) img,
+.tgi > input:nth-of-type(2):checked ~ .nav > :nth-child(2) img,
+.tgi > input:nth-of-type(3):checked ~ .nav > :nth-child(3) img { opacity: 1; }
+
+.tgi > input:nth-of-type(1):checked ~ .panes > :nth-child(1),
+.tgi > input:nth-of-type(2):checked ~ .panes > :nth-child(2),
+.tgi > input:nth-of-type(3):checked ~ .panes > :nth-child(3) { display: block; }
+
+.tgi > input#t3close:checked ~ .panes > div { display: none; }
+
+@media (max-width: 600px) {
+  .tgi .nav { gap: 8px; }
+  .tgi .panes img { height: 240px; }
+  .tgi .tgi-caption { font-size: 16px; }
+}
+
 
 /* ---------- BUTTONS ---------- */
-.a-btn { border: 0; color: #fff; padding: 16px 32px; margin: 4px 2px; font: inherit; font-size: 16px; cursor: pointer; opacity: .6; transition: opacity .3s; }
-.a-btn:hover { opacity: 1; }
-.a-ok { background: #4CAF50; }
+.a-btn { border: 0; color: #fff; padding: 16px 32px; margin: 4px 2px; font: inherit; font-size: 16px; cursor: pointer; }
+.a-ok { background: #04AA6D; }
+.a-ok:hover { background: #46a049;}
 .a-inf { background: #2196F3; }
+.a-inf:hover { background: #0b7dda; }
 .a-wrn { background: #ff9800; }
+.a-wrn:hover { background: #e68a00; }
 .a-dng { background: #f44336; }
+.a-dng:hover { background: #da190b; }
 .a-dft { background: #e7e7e7; color: #000; }
+.a-dft:hover { background: #ddd; }
 .o-btn { background: transparent; border: 2px solid var(--c, #777); color: var(--c, #777); padding: 14px 30px; margin: 4px 2px; font: inherit; font-size: 16px; cursor: pointer; }
 .o-btn:hover { background: var(--c, #777); color: #fff; }
-.o-ok { --c: #4CAF50; }
+.o-ok { --c: #04AA6D; }
 .o-inf { --c: #2196F3; }
 .o-wrn { --c: #ff9800; }
 .o-dng { --c: #f44336; }
