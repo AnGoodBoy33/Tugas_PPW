@@ -83,10 +83,13 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
 .fsocial { display: flex; justify-content: center; align-items: center; gap: 22px; margin-bottom: 22px; font-size: 18px; }
 .fsocial img { width: 26px; height: 26px; }
 .fsocial a { color: #ddd; }
-.foot p { color: #ccc; margin: 6px 0; }
+.foot p { color: #ccc; margin: 15px 0 0; line-height: 1.5; }
+.foot p a { color: inherit; text-decoration: underline; }
+.foot p a:hover { color: #fff; }
 
 /* ---------- ADVENTURE BANNER (tampil sebelum footer) ---------- */
-.adventure { order: 99; position: relative; height: 425px; overflow: hidden; margin: 0 0 36px; background: linear-gradient(#d4e8f2 0%, #e7f3f9 37%, #94be77 37%, #6fa04f 100%); }
+.adventure { margin: 0 0 36px; }
+.adventure img { display: block; width: 100%; height: auto; }
 .scene { position: absolute; left: 0; bottom: 0; width: 100%; height: 170px; object-fit: fill; }
 .progress-card { position: absolute; left: 10px; top: 27px; z-index: 3; width: 258px; padding: 16px; background: #fff; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, .15); }
 .progress-card small { font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #0b6e4f; text-transform: uppercase; }
@@ -211,7 +214,6 @@ details[open] summary:hover { background: #ccc; }
 .fx-tab-title { padding: 15px 15px 0; font-size: 16px; color: #000; }
 .fx-tab-demo { margin: 15px; }
 
-/* ---------- SLIDESHOW (radio + label, tanpa JS) ---------- */
 
 .rs { position: relative; }
 .rs > input { position: absolute; opacity: 0; pointer-events: none; }
@@ -426,12 +428,12 @@ details[open] summary:hover { background: #ccc; }
 .cbs-frame { position: relative; height: 420px; overflow: hidden; }
 .cbs { height: 100%; overflow-y: auto; background: #fff; }
 .cbs .bg-image { height: 50%; background-position: center; background-repeat: no-repeat; background-size: cover; }
-.cbs .img1 { background-image: url("slideshow2.jpg"); }
-.cbs .img2 { background-image: url("slideshow3.jpg"); }
-.cbs .img3 { background-image: url("slideshow4.jpg"); }
-.cbs .img4 { background-image: url("slideshow1.jpg"); }
-.cbs .img5 { background-image: url("5terre-wide.jpg"); }
-.cbs .img6 { background-image: url("woods-wide.jpg"); }
+.cbs .img1 { background-image: url("Sources/slideshow2.jpg"); }
+.cbs .img2 { background-image: url("Sources/slideshow3.jpg"); }
+.cbs .img3 { background-image: url("Sources/slideshow4.jpg"); }
+.cbs .img4 { background-image: url("Sources/slideshow1.jpg"); }
+.cbs .img5 { background-image: url("Sources/5terre-wide.jpg"); }
+.cbs .img6 { background-image: url("Sources/woods-wide.jpg"); }
 .cbs-text { background-color: rgba(0, 0, 0, 0.4); color: white; font-weight: bold; font-size: clamp(36px, 6vw, 80px); border: 10px solid #f1f1f1; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; width: 300px; max-width: calc(100% - 40px); padding: 20px; text-align: center; box-sizing: border-box; pointer-events: none; }
 
 /* ---------- RESPONSIVE ---------- */
@@ -462,10 +464,10 @@ details[open] summary:hover { background: #ccc; }
 }
 
 /* ---------- PROMO SPACES ---------- */
-.promo-card { background: #ffffd5; box-shadow: 0 1px 4px rgba(0, 0, 0, .25); padding: 30px 20px; margin: 0 0 40px; text-align: center; }
-.promo-card h3 { font-size: 26px; font-weight: 600; margin-bottom: 8px; }
-.promo-card p { font-size: 17px; margin-bottom: 8px; }
-.promo-btn { display: inline-block; background: #04aa6d; color: #fff; padding: 12px 20px; border-radius: 4px; font-weight: 700; margin: 10px 0; }
+.promo-card { background: #ffffd5; box-shadow: 0 1px 4px rgba(0, 0, 0, .25); padding: 30px 20px; margin: 0 12px 40px; text-align: left; }
+.promo-card p { font-size: 17px; margin-bottom: 15px; }
+.promo-btn { display: inline-block; background: #04aa6d; color: #fff; padding: 10px 18px; border-radius: 4px; font-weight: 700; margin: 0; }
+.promo-btn:hover { background-color: #059862 !important; color: #ffffff; }
 
 /* ---------- HOVER PAGINATION ---------- */
 .pag a { transition: background-color .3s; }
